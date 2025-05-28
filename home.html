@@ -9,8 +9,19 @@
 </head>
 <body>
     <div id="container">
-        <div id="squareGrid">
-            
+        <div id="header">
+            Etch-a-sketch!
+        </div>
+        <div id="inputHolder">
+            <button onclick="getGridSizeFromUser()">Set Grid Size</button>
+            <div id="checkboxHolder">
+                <input type="checkbox" id="randomizeColors" onclick="toggleRandomizeColors()">
+                <label for="randomizeColors">Randomize Colors</label>
+            </div>
+        </div>
+        <div id="squareGrid"></div>
+        <div id="footer">
+            Ryan Z.
         </div>
     </div>
     

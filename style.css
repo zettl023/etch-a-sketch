@@ -1,32 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-color: aliceblue;
+}
+
 #container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid red 1px;
-    max-width: 100vw;
-    max-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+button, label {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header {
+    text-align: center;
+    font-size: 2.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-grow: 0;
+    min-width: 300px;
+}
+
+#footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: auto;
+}
+
+#inputHolder {
+    display: flex;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    width: min(600px, 80vh, 80vw);
 }
 
 #squareGrid {
-    border: solid green 1px;
+    border: 3px solid black;
     display: flex;
-    flex: auto;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100vw;
-    max-height: 100vh;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: min(600px, 80vh, 80vw);
+    min-width: 300px;
+    aspect-ratio: 1/1;
+    margin: 5px;
 }
 
 .squareRow {
-    flex: auto;
     display: flex;
+    flex-grow: 0;
     width: 100%;
-    border: solid black 1px;
+    outline: solid black 1px;
 }
 
 .square {
     flex: auto;
-    border: solid black 1px;
+    outline: solid black 1px;
     aspect-ratio: 1/1;
+    /* NOTE: The width is set programmatically in the javascript file based on the number of squares. */
 }
